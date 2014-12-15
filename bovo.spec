@@ -1,12 +1,13 @@
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	Classic pen and paper game
 Name:		bovo
-Version:	4.14.3
-Release:	2
+Version:	14.11.97
+Release:	1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://games.kde.org/game.php?game=bovo
-Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	libkdegames-devel
 
 %description
@@ -20,6 +21,7 @@ Five, Five in a row, X and O, Naughts and Crosses)
 %{_kde_appsdir}/bovo
 %{_kde_docdir}/*/*/bovo
 %{_kde_iconsdir}/hicolor/*/apps/bovo.*
+%{_datadir}/apps/appdata/bovo.appdata.xml
 
 #------------------------------------------------------------------------------
 
@@ -34,8 +36,8 @@ Five, Five in a row, X and O, Naughts and Crosses)
 %makeinstall_std -C build
 
 %changelog
-* Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.14.3-1
-- New version 4.14.3
+* Tue Nov 11 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:14.11.97-1
+- New version 14.11.97
 
 * Wed Oct 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1:4.14.2-1
 - New version 4.14.2
