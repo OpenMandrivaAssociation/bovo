@@ -29,9 +29,9 @@ Five, Five in a row, X and O, Naughts and Crosses)
 
 %prep
 %setup -q
+%cmake_kde5
 
 %build
-%cmake_kde5
 %ninja -C build
 
 %install
