@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   bovo-15.08.0.tar.xz: e4cbbfead1cf9733597c9bdd044f309c9484c32e
+sources:
+  bovo-15.08.1.tar.xz: 45226f6f1d726cbea5d9815ddd7a374681a9d382
