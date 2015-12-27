@@ -29,7 +29,7 @@ Five, Five in a row, X and O, Naughts and Crosses)
 %{_datadir}/bovo
 %{_docdir}/*/*/bovo
 %{_iconsdir}/hicolor/*/apps/bovo.*
-%{_datadir}/appdata/bovo.appdata.xml
+%{_datadir}/appdata/org.kde.bovo.appdata.xml
 %{_datadir}/kxmlgui5/bovo
 
 #------------------------------------------------------------------------------
