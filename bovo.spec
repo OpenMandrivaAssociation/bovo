@@ -8,8 +8,15 @@ License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://games.kde.org/game.php?game=bovo
 Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
-BuildRequires:	libkdegames-devel
 BuildRequires:	cmake(ECM)
+BuildRequires:	cmake(KF5KDEGames)
+BuildRequires:	cmake(KF5CoreAddons)
+BuildRequires:	cmake(KF5DBusAddons)
+BuildRequires:	cmake(KF5DocTools)
+BuildRequires:	cmake(KF5XmlGui)
+BuildRequires:	pkgconfig(Qt5Svg)
+BuildRequires:	pkgconfig(Qt5Concurrent)
+BuildRequires:	pkgconfig(Qt5Widgets)
 
 %description
 Bovo is a Gomoku like game for two players, where the opponents alternate in
