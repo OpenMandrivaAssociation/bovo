@@ -2,7 +2,7 @@
 Summary:	Classic pen and paper game
 Name:		bovo
 Version:	15.12.3
-Release:	1
+Release:	2
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
