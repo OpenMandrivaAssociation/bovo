@@ -25,7 +25,7 @@ BuildRequires:	pkgconfig(Qt5Quick)
 %description
 Bovo is a Gomoku like game for two players, where the opponents alternate in
 placing their respective pictogram on the game board. (Also known as: Connect
-Five, Five in a row, X and O, Naughts and Crosses)
+Five, Five in a row, X and O, Naughts and Crosses).
 
 %files
 %{_bindir}/bovo
@@ -33,7 +33,7 @@ Five, Five in a row, X and O, Naughts and Crosses)
 %{_datadir}/bovo
 %{_docdir}/*/*/bovo
 %{_datadir}/icons/hicolor/*/apps/bovo.*
-%{_datadir}/appdata/org.kde.bovo.appdata.xml
+%{_datadir}/metainfo/org.kde.bovo.appdata.xml
 %{_datadir}/kxmlgui5/bovo
 
 #------------------------------------------------------------------------------
