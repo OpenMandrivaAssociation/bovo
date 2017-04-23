@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	Classic pen and paper game
 Name:		bovo
-Version:	17.03.80
+Version:	17.04.0
 Release:	1
 Epoch:		1
 License:	GPLv2+
@@ -27,11 +27,10 @@ Bovo is a Gomoku like game for two players, where the opponents alternate in
 placing their respective pictogram on the game board. (Also known as: Connect
 Five, Five in a row, X and O, Naughts and Crosses).
 
-%files
+%files -f %{name}.lang
 %{_bindir}/bovo
 %{_datadir}/applications/org.kde.bovo.desktop
 %{_datadir}/bovo
-%{_docdir}/*/*/bovo
 %{_datadir}/icons/hicolor/*/apps/bovo.*
 %{_datadir}/metainfo/org.kde.bovo.appdata.xml
 %{_datadir}/kxmlgui5/bovo
@@ -47,3 +46,4 @@ Five, Five in a row, X and O, Naughts and Crosses).
 
 %install
 %ninja_install -C build
+%find_lang %{name} --with-html
