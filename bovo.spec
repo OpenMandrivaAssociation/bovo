@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	Classic pen and paper game
 Name:		bovo
-Version:	19.12.3
+Version:	20.03.80
 Release:	1
 Epoch:		1
 License:	GPLv2+
@@ -33,7 +33,6 @@ Five, Five in a row, X and O, Naughts and Crosses).
 %{_datadir}/bovo
 %{_datadir}/icons/hicolor/*/apps/bovo.*
 %{_datadir}/metainfo/org.kde.bovo.appdata.xml
-%{_datadir}/kxmlgui5/bovo
 
 #------------------------------------------------------------------------------
 
