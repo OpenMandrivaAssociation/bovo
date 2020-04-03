@@ -1,7 +1,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	Classic pen and paper game
 Name:		bovo
-Version:	20.03.80
+Version:	20.03.90
 Release:	1
 Epoch:		1
 License:	GPLv2+
