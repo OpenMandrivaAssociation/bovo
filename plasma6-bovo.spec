@@ -9,7 +9,7 @@ Group:		Graphical desktop/KDE
 Url:		http://games.kde.org/game.php?game=bovo
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/bovo-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
-BuildRequires:	cmake(KF6KDEGames)
+BuildRequires:	cmake(KDEGames6)
 BuildRequires:	cmake(KF6CoreAddons)
 BuildRequires:	cmake(KF6DBusAddons)
 BuildRequires:	cmake(KF6DocTools)
@@ -27,7 +27,7 @@ Bovo is a Gomoku like game for two players, where the opponents alternate in
 placing their respective pictogram on the game board. (Also known as: Connect
 Five, Five in a row, X and O, Naughts and Crosses).
 
-%files -f %{name}.lang
+%files -f bovo.lang
 %{_bindir}/bovo
 %{_datadir}/applications/org.kde.bovo.desktop
 %{_datadir}/bovo
@@ -37,7 +37,7 @@ Five, Five in a row, X and O, Naughts and Crosses).
 #------------------------------------------------------------------------------
 
 %prep
-%autosetup -p1
+%autosetup -p1 -n bovo-%{version}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
@@ -47,4 +47,4 @@ Five, Five in a row, X and O, Naughts and Crosses).
 
 %install
 %ninja_install -C build
-%find_lang %{name} --with-html
+%find_lang bovo --with-html
