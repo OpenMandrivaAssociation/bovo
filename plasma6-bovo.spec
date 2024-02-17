@@ -1,13 +1,20 @@
+%define git 20240217
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	Classic pen and paper game
 Name:		plasma6-bovo
-Version:	24.01.95
-Release:	1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://games.kde.org/game.php?game=bovo
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/games/bovo/-/archive/%{gitbranch}/bovo-%{gitbranchd}.tar.bz2#/bovo-%{git}.tar.bz2
+%else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/bovo-%{version}.tar.xz
+%endif
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KDEGames6)
 BuildRequires:	cmake(KF6CoreAddons)
@@ -38,7 +45,7 @@ Five, Five in a row, X and O, Naughts and Crosses).
 #------------------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n bovo-%{version}
+%autosetup -p1 -n bovo-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
