@@ -9,7 +9,7 @@ Release:	%{?git:0.%{git}.}1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://games.kde.org/game.php?game=bovo
+Url:		https://games.kde.org/game.php?game=bovo
 %if 0%{?git:1}
 Source0:	https://invent.kde.org/games/bovo/-/archive/%{gitbranch}/bovo-%{gitbranchd}.tar.bz2#/bovo-%{git}.tar.bz2
 %else
