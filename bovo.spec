@@ -6,7 +6,7 @@ Release:	1
 Epoch:		1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		http://games.kde.org/game.php?game=bovo
+Url:		https://games.kde.org/game.php?game=bovo
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5KDEGames)
