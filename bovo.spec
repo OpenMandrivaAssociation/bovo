@@ -4,7 +4,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 Summary:	Classic pen and paper game
 Name:		bovo
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 Epoch:		1
 License:	GPLv2+
@@ -30,29 +30,19 @@ BuildRequires:	pkgconfig(Qt6Widgets)
 BuildRequires:	pkgconfig(Qt6Qml)
 BuildRequires:	pkgconfig(Qt6Quick)
 
+%rename plamsa6-bovo
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 Bovo is a Gomoku like game for two players, where the opponents alternate in
 placing their respective pictogram on the game board. (Also known as: Connect
 Five, Five in a row, X and O, Naughts and Crosses).
 
-%files -f bovo.lang
+%files -f %{name}.lang
 %{_bindir}/bovo
 %{_datadir}/applications/org.kde.bovo.desktop
 %{_datadir}/bovo
 %{_datadir}/icons/hicolor/*/apps/bovo.*
 %{_datadir}/metainfo/org.kde.bovo.appdata.xml
-
-#------------------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n bovo-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang bovo --with-html
