@@ -30,7 +30,7 @@ BuildRequires:	pkgconfig(Qt6Widgets)
 BuildRequires:	pkgconfig(Qt6Qml)
 BuildRequires:	pkgconfig(Qt6Quick)
 
-%rename plamsa6-bovo
+%rename plasma6-bovo
 
 BuildSystem:	cmake
 BuildOption:	-DBUILD_PYTHON_BINDINGS:BOOL=OFF
